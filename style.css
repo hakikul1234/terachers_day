@@ -5521,3 +5521,1142 @@ button:focus-visible {
         animation-duration: 0.01ms;
     }
 }
+
+
+/* =========================================================
+   TEACHER'S DAY CELEBRATION
+========================================================= */
+
+.celebration {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 999999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 190, 220, 0.5),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #24102f,
+            #531d46,
+            #7d294d,
+            #351735
+        );
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+
+/* =========================================================
+   ACTIVE STATE
+========================================================= */
+
+.celebration.active {
+    display: flex;
+
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.celebration-bg {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.celebration-glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: 0.35;
+
+    animation: glowMove 6s ease-in-out infinite alternate;
+}
+
+.glow-one {
+    top: -100px;
+    left: -100px;
+    background: #ff77aa;
+}
+
+.glow-two {
+    right: -100px;
+    top: 20%;
+    background: #8b7cff;
+    animation-delay: 1s;
+}
+
+.glow-three {
+    bottom: -150px;
+    left: 35%;
+    background: #ffcc66;
+    animation-delay: 2s;
+}
+
+
+@keyframes glowMove {
+
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1.25);
+    }
+}
+
+
+/* =========================================================
+   FLOATING HEARTS & STARS
+========================================================= */
+
+.floating-celebration {
+    position: absolute;
+
+    font-size: 30px;
+
+    pointer-events: none;
+
+    animation:
+        floatCelebration 5s ease-in-out infinite;
+}
+
+
+.heart-1 {
+    left: 8%;
+    top: 20%;
+}
+
+.heart-2 {
+    left: 15%;
+    bottom: 20%;
+    animation-delay: 1s;
+}
+
+.heart-3 {
+    right: 10%;
+    top: 25%;
+    animation-delay: 2s;
+}
+
+.heart-4 {
+    right: 17%;
+    bottom: 18%;
+    animation-delay: 3s;
+}
+
+.star-1 {
+    left: 25%;
+    top: 12%;
+    animation-delay: 1.5s;
+}
+
+.star-2 {
+    right: 25%;
+    top: 12%;
+    animation-delay: 2.5s;
+}
+
+.star-3 {
+    right: 7%;
+    bottom: 35%;
+    animation-delay: 3.5s;
+}
+
+
+@keyframes floatCelebration {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-5deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            rotate(8deg)
+            scale(1.15);
+    }
+}
+
+
+/* =========================================================
+   BALLOONS AROUND SCREEN
+========================================================= */
+
+.balloons {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+
+.balloon {
+    position: absolute;
+
+    font-size: 70px;
+
+    animation:
+        balloonFloat 4s ease-in-out infinite;
+}
+
+
+.balloon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 100px;
+
+    left: 50%;
+    top: 55px;
+
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+.balloon-red {
+    left: 3%;
+    top: 8%;
+}
+
+.balloon-blue {
+    left: 12%;
+    top: 50%;
+
+    animation-delay: 1s;
+}
+
+.balloon-yellow {
+    right: 5%;
+    top: 10%;
+
+    animation-delay: 1.5s;
+}
+
+.balloon-pink {
+    right: 12%;
+    top: 52%;
+
+    animation-delay: 2s;
+}
+
+.balloon-purple {
+    left: 28%;
+    top: 2%;
+
+    font-size: 48px;
+
+    animation-delay: 2.5s;
+}
+
+.balloon-green {
+    right: 28%;
+    top: 4%;
+
+    font-size: 48px;
+
+    animation-delay: 3s;
+}
+
+
+@keyframes balloonFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-6deg);
+    }
+
+    50% {
+        transform:
+            translateY(-20px)
+            rotate(6deg);
+    }
+}
+
+
+/* =========================================================
+   STUDENTS / BOYS
+========================================================= */
+
+.celebration-students {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 230px;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+.student {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 120px;
+
+    text-align: center;
+
+    animation:
+        studentBounce 2.5s ease-in-out infinite;
+}
+
+
+.student-one {
+    left: 5%;
+}
+
+.student-two {
+    left: 20%;
+
+    animation-delay: 0.5s;
+}
+
+.student-three {
+    right: 20%;
+
+    animation-delay: 1s;
+}
+
+.student-four {
+    right: 5%;
+
+    animation-delay: 1.5s;
+}
+
+
+.student-head {
+    position: relative;
+
+    font-size: 65px;
+
+    line-height: 1;
+}
+
+
+.student-shirt {
+    margin-top: -5px;
+
+    font-size: 65px;
+
+    line-height: 0.8;
+}
+
+
+.student-legs {
+    font-size: 45px;
+
+    line-height: 0.8;
+}
+
+
+/* Balloon held by student */
+
+.student-balloon {
+    position: absolute;
+
+    top: -90px;
+
+    left: 50%;
+
+    font-size: 55px;
+
+    transform-origin: bottom center;
+
+    animation:
+        heldBalloon 2s ease-in-out infinite;
+}
+
+
+.balloon-a {
+    left: 72%;
+}
+
+.balloon-b {
+    left: 10%;
+
+    animation-delay: 0.4s;
+}
+
+.balloon-c {
+    left: 70%;
+
+    animation-delay: 0.8s;
+}
+
+.balloon-d {
+    left: 10%;
+
+    animation-delay: 1.2s;
+}
+
+
+@keyframes heldBalloon {
+
+    0%,
+    100% {
+        transform:
+            rotate(-8deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(8deg)
+            translateY(-8px);
+    }
+}
+
+
+@keyframes studentBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================================================
+   MAIN CELEBRATION CARD
+========================================================= */
+
+.celebration-card {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(680px, 82vw);
+
+    min-height: 500px;
+
+    padding: 45px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #fff5f8
+        );
+
+    border: 6px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.45),
+        0 0 0 2px rgba(255, 180, 210, 0.5);
+
+    transform:
+        scale(0.65)
+        translateY(40px);
+
+    opacity: 0;
+
+    transition:
+        transform 0.7s
+        cubic-bezier(.17,.67,.32,1.3),
+        opacity 0.5s ease;
+}
+
+
+/* Card opens */
+
+.celebration.active .celebration-card {
+
+    transform:
+        scale(1)
+        translateY(0);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CARD DECORATION
+========================================================= */
+
+.card-corner {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    color: #e8a33d;
+
+    animation:
+        cornerSparkle 1.8s ease-in-out infinite;
+}
+
+
+.corner-top-left {
+    top: 20px;
+    left: 25px;
+}
+
+.corner-top-right {
+    top: 20px;
+    right: 25px;
+
+    animation-delay: 0.4s;
+}
+
+.corner-bottom-left {
+    bottom: 20px;
+    left: 25px;
+
+    animation-delay: 0.8s;
+}
+
+.corner-bottom-right {
+    bottom: 20px;
+    right: 25px;
+
+    animation-delay: 1.2s;
+}
+
+
+@keyframes cornerSparkle {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(20deg);
+    }
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.celebration-card-icon {
+
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd166,
+            #ff9f68
+        );
+
+    font-size: 45px;
+
+    box-shadow:
+        0 10px 25px rgba(220, 130, 50, 0.3);
+
+    animation:
+        trophyPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes trophyPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08) rotate(-3deg);
+    }
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.celebration-small-title {
+
+    margin: 5px 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #9a7180;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.celebration-title {
+
+    margin: 5px 0 10px;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size:
+        clamp(2.5rem, 7vw, 4.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    color: #3a2030;
+
+    text-shadow:
+        2px 3px 0 rgba(255, 200, 215, 0.6);
+
+    animation:
+        titleGlow 2s ease-in-out infinite;
+}
+
+
+.celebration-title span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e83e72,
+            #f08a4b,
+            #a34fc5
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+@keyframes titleGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.celebration-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 10px 0 15px;
+
+    color: #e86b8a;
+}
+
+
+.celebration-divider i {
+
+    display: block;
+
+    width: 55px;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #e86b8a,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.celebration-subtitle {
+
+    max-width: 520px;
+
+    margin: 0 auto 15px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    color: #684b59;
+}
+
+
+/* =========================================================
+   TEACHER NAME
+========================================================= */
+
+.celebration-teacher {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 9px 20px;
+
+    margin: 5px 0 15px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0b8,
+            #ffe3ef
+        );
+
+    border: 1px solid #f3cbd6;
+
+    color: #8c3c59;
+}
+
+
+.celebration-teacher strong {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   THANK YOU TEXT
+========================================================= */
+
+.celebration-thanks {
+
+    max-width: 480px;
+
+    margin: 0 0 12px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.9rem;
+
+    color: #765966;
+}
+
+
+/* =========================================================
+   STUDENT NOTE
+========================================================= */
+
+.celebration-student-note {
+
+    margin-bottom: 18px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.72rem;
+
+    color: #9a7c87;
+}
+
+
+.celebration-student-note strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #b34d6d;
+}
+
+
+/* =========================================================
+   CLOSE / CONTINUE BUTTON
+========================================================= */
+
+.celebration-close-button {
+
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e94f7d,
+            #b34fc5
+        );
+
+    box-shadow:
+        0 10px 25px rgba(200, 70, 120, 0.3);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.celebration-close-button:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.04);
+
+    box-shadow:
+        0 15px 30px rgba(200, 70, 120, 0.4);
+}
+
+
+.celebration-close-button:active {
+
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   BOTTOM TEXT
+========================================================= */
+
+.celebration-bottom-text {
+
+    position: absolute;
+
+    bottom: 15px;
+
+    left: 0;
+    right: 0;
+
+    z-index: 15;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 1px;
+
+    animation:
+        bottomTextPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes bottomTextPulse {
+
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+.confetti-container {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 25;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+.confetti-piece {
+
+    position: absolute;
+
+    top: -70px;
+
+    display: block;
+
+    user-select: none;
+
+    animation:
+        teacherConfetti
+        linear
+        forwards;
+}
+
+
+@keyframes teacherConfetti {
+
+    0% {
+
+        transform:
+            translateY(-80px)
+            rotate(0deg)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(115vh)
+            rotate(720deg)
+            scale(0.7);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .celebration-card {
+
+        width: 88vw;
+
+        min-height: 460px;
+
+        padding:
+            35px 25px 30px;
+    }
+
+    .celebration-card-icon {
+
+        width: 65px;
+        height: 65px;
+
+        font-size: 35px;
+    }
+
+    .celebration-title {
+
+        font-size: 2.7rem;
+    }
+
+    .celebration-subtitle {
+
+        font-size: 0.85rem;
+    }
+
+    /* Keep students visible but smaller */
+
+    .celebration-students {
+
+        height: 130px;
+    }
+
+    .student {
+
+        transform: scale(0.65);
+
+        transform-origin: bottom center;
+    }
+
+    .student-one {
+        left: -15px;
+    }
+
+    .student-two {
+        left: 8%;
+    }
+
+    .student-three {
+        right: 8%;
+    }
+
+    .student-four {
+        right: -15px;
+    }
+
+    /* Fewer background balloons */
+
+    .balloon-purple,
+    .balloon-green {
+
+        display: none;
+    }
+
+    .balloon {
+
+        font-size: 45px;
+    }
+
+    .floating-celebration {
+
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .celebration-card {
+
+        min-height: 420px;
+
+        padding: 25px 18px;
+    }
+
+    .celebration-title {
+
+        font-size: 2.15rem;
+    }
+
+    .celebration-card-icon {
+
+        width: 55px;
+        height: 55px;
+
+        font-size: 30px;
+    }
+
+    .celebration-small-title {
+
+        font-size: 0.62rem;
+
+        letter-spacing: 2px;
+    }
+
+    .celebration-teacher strong {
+
+        font-size: 1.05rem;
+    }
+
+    .celebration-thanks {
+
+        font-size: 0.78rem;
+    }
+
+    .celebration-bottom-text {
+
+        font-size: 0.6rem;
+    }
+
+}

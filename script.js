@@ -1091,151 +1091,230 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+/* =====================================================
+   CELEBRATION
+===================================================== */
 
-    /* =====================================================
-       CELEBRATION
-    ===================================================== */
+function createConfetti() {
 
-    function createConfetti() {
+    if (!celebration) {
+        console.warn("⚠️ Celebration element not found.");
+        return;
+    }
 
-        if (!celebration) {
-            return;
-        }
+    const container =
+        celebration.querySelector(".confetti-container");
 
-        const container =
-            celebration.querySelector(
-                ".confetti-container"
+    if (!container) {
+        console.warn("⚠️ Confetti container not found.");
+        return;
+    }
+
+    /* Remove old confetti */
+    container.innerHTML = "";
+
+    const symbols = [
+        "🎉",
+        "✨",
+        "❤️",
+        "💖",
+        "⭐",
+        "🌸",
+        "🎓",
+        "🎊",
+        "💕",
+        "🥳"
+    ];
+
+    for (let i = 0; i < 80; i++) {
+
+        const piece =
+            document.createElement("span");
+
+        piece.className = "confetti-piece";
+
+        piece.textContent =
+            symbols[
+                Math.floor(
+                    Math.random() * symbols.length
+                )
+            ];
+
+        /* Random horizontal position */
+        piece.style.left =
+            `${Math.random() * 100}%`;
+
+        /* Random size */
+        piece.style.fontSize =
+            `${16 + Math.random() * 20}px`;
+
+        /* Random animation */
+        piece.style.animationDelay =
+            `${Math.random() * 1.5}s`;
+
+        piece.style.animationDuration =
+            `${2.5 + Math.random() * 3}s`;
+
+        container.appendChild(piece);
+    }
+}
+
+
+/* =====================================================
+   OPEN CELEBRATION
+===================================================== */
+
+function openCelebrationFunction() {
+
+    console.log("🎉 Celebrate button clicked!");
+
+    if (!celebration) {
+        console.error(
+            "❌ #celebration was not found in HTML."
+        );
+        return;
+    }
+
+    /* Create confetti first */
+    createConfetti();
+
+    /* Remove hidden state if another CSS rule added it */
+    celebration.removeAttribute("hidden");
+
+    /* Show overlay */
+    celebration.classList.add("active");
+
+    /* Accessibility */
+    celebration.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    /* Prevent background scrolling */
+    document.body.classList.add(
+        "celebration-open"
+    );
+
+    /* Force visibility in case existing CSS conflicts */
+    celebration.style.display = "flex";
+    celebration.style.visibility = "visible";
+    celebration.style.opacity = "1";
+    celebration.style.pointerEvents = "auto";
+
+}
+
+
+/* =====================================================
+   CLOSE CELEBRATION
+===================================================== */
+
+function closeCelebrationFunction() {
+
+    if (!celebration) {
+        return;
+    }
+
+    celebration.classList.remove("active");
+
+    celebration.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove(
+        "celebration-open"
+    );
+
+    /* Let CSS handle the closing animation */
+    celebration.style.visibility = "";
+    celebration.style.opacity = "";
+    celebration.style.pointerEvents = "";
+
+}
+
+
+/* =====================================================
+   CELEBRATE BUTTON CLICK
+===================================================== */
+
+if (celebrateButton) {
+
+    celebrateButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            console.log(
+                "🎉 Opening Teacher's Day Celebration..."
             );
 
-        if (!container) {
-            return;
-        }
-
-        container.innerHTML = "";
-
-        const symbols = [
-            "🎉",
-            "✨",
-            "❤️",
-            "💖",
-            "⭐",
-            "🌸",
-            "🎓",
-            "🎊"
-        ];
-
-        for (let i = 0; i < 70; i++) {
-
-            const piece =
-                document.createElement(
-                    "span"
-                );
-
-            piece.className =
-                "confetti-piece";
-
-            piece.textContent =
-                symbols[
-                    Math.floor(
-                        Math.random() *
-                        symbols.length
-                    )
-                ];
-
-            piece.style.left =
-                `${Math.random() * 100}%`;
-
-            piece.style.animationDelay =
-                `${Math.random() * 2}s`;
-
-            piece.style.animationDuration =
-                `${2 + Math.random() * 3}s`;
-
-            container.appendChild(
-                piece
-            );
+            openCelebrationFunction();
 
         }
+    );
 
-    }
+} else {
+
+    console.error(
+        "❌ Celebrate button #celebrateButton was not found."
+    );
+
+}
 
 
-    function openCelebrationFunction() {
+/* =====================================================
+   CLOSE CELEBRATION BUTTON
+===================================================== */
 
-        if (!celebration) {
-            return;
+if (closeCelebration) {
+
+    closeCelebration.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            closeCelebrationFunction();
+
         }
+    );
 
-        createConfetti();
-
-        celebration.classList.add(
-            "active"
-        );
-
-        celebration.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-        document.body.classList.add(
-            "celebration-open"
-        );
-
-    }
+}
 
 
-    function closeCelebrationFunction() {
+/* =====================================================
+   CLOSE WHEN CLICKING OUTSIDE MESSAGE
+===================================================== */
 
-        if (!celebration) {
-            return;
-        }
+if (celebration) {
 
-        celebration.classList.remove(
-            "active"
-        );
+    celebration.addEventListener(
+        "click",
+        function (event) {
 
-        celebration.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.classList.remove(
-            "celebration-open"
-        );
-
-    }
-
-
-    if (celebrateButton) {
-
-        celebrateButton.addEventListener(
-            "click",
-            (event) => {
-
-                event.preventDefault();
-
-                openCelebrationFunction();
-
-            }
-        );
-
-    }
-
-
-    if (closeCelebration) {
-
-        closeCelebration.addEventListener(
-            "click",
-            (event) => {
-
-                event.preventDefault();
+            /*
+             * Only close when the overlay itself
+             * is clicked, not the message/button.
+             */
+            if (
+                event.target === celebration ||
+                event.target.classList.contains(
+                    "confetti-container"
+                )
+            ) {
 
                 closeCelebrationFunction();
 
             }
-        );
 
-    }
+        }
+    );
+
+}
+
 
 
     /* =====================================================
