@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#111111">
+
+    <meta name="description"
+        content="A special Teacher's Day surprise filled with memories, appreciation, music and love.">
+
+    <title>Happy Teacher's Day ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     LOADING SCREEN
+========================================================= -->
+
+<div id="loadingScreen" class="loading-screen">
+
+    <div class="loader-content">
+
+        <div class="loader-icon">
+            🎓
+        </div>
+
+        <h2>Preparing something special...</h2>
+
+        <div class="loader">
+            <div class="loader-bar"></div>
+        </div>
+
+        <p>Made especially for your teacher ❤️</p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     INTRO SCREEN
+========================================================= -->
+
+<section id="introScreen" class="screen intro-screen">
+
+    <div class="stars"></div>
+
+    <div class="intro-content">
+
+        <div class="intro-emoji">
+            🎁
+        </div>
+
+        <p class="small-heading">
+            POV: You didn't give your teacher a greeting card...
+        </p>
+
+        <h1>
+            You gave them
+            <span>something unforgettable.</span>
+        </h1>
+
+        <p class="intro-description">
+            A little digital surprise filled with memories,
+            appreciation, music and lots of love.
+        </p>
+
+        <button
+            id="startButton"
+            class="primary-button"
+            type="button">
+
+            Open Your Surprise
+            <span>→</span>
+
+        </button>
+
+        <p class="hint">
+            🎀 Made specially for your teacher
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CLASSROOM DOOR ANIMATION
+========================================================= -->
+
+<div
+    id="doorAnimation"
+    class="door-animation"
+    aria-hidden="true">
+
+
+    <!-- CLASSROOM BEHIND THE DOOR -->
+
+    <div class="door-classroom">
+
+        <div class="door-light"></div>
+
+
+        <!-- BA CLASS / HISTORY DEPARTMENT -->
+
+        <div class="door-welcome">
+
+            <span>BA CLASS</span>
+
+            <small>
+                WITH HISTORY DEPARTMENT
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         LEFT DOOR
+    ====================================================== -->
+
+    <div class="door-left">
+
+        <div class="door-panel">
+
+            <div class="door-window"></div>
+
+            <div class="door-handle"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         RIGHT DOOR
+    ====================================================== -->
+
+    <div class="door-right">
+
+        <div class="door-panel">
+
+            <div class="door-window"></div>
+
+            <div class="door-handle"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN APPLICATION
+========================================================= -->
+
+<main id="app" class="app hidden">
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="top-bar">
+
+        <div class="brand">
+
+            <span class="brand-icon">🎓</span>
+
+            <span>Teacher's Day</span>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <button
+                id="musicButton"
+                class="icon-button"
+                type="button"
+                aria-label="Toggle music"
+                title="Toggle music">
+
+                🎵
+
+            </button>
+
+
+            <button
+                id="homeButton"
+                class="icon-button"
+                type="button"
+                aria-label="Go home"
+                title="Go home">
+
+                🏠
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CLASSROOM
+    ====================================================== -->
+
+    <section
+        id="classroom"
+        class="page classroom-page active-page">
+
+
+        <div class="classroom-background">
+
+            <div class="ceiling"></div>
+
+
+            <!-- Decorative flags -->
+
+            <div class="flags">
+
+                <span>🔺</span>
+                <span>🔻</span>
+                <span>🔺</span>
+                <span>🔻</span>
+                <span>🔺</span>
+                <span>🔻</span>
+
+            </div>
+
+
+
+            <!-- Left Window -->
+
+            <div class="window left-window">
+
+                <div class="window-glass"></div>
+
+                <div class="plant-window">
+                    🌿
+                </div>
+
+            </div>
+
+
+
+            <!-- Right Window -->
+
+            <div class="window right-window">
+
+                <div class="window-glass"></div>
+
+            </div>
+
+
+
+            <!-- Ceiling Lamps -->
+
+            <div class="lamp lamp-left">
+                💡
+            </div>
+
+            <div class="lamp lamp-right">
+                💡
+            </div>
+
+
+
+            <!-- Bookshelf -->
+
+            <aside class="bookshelf">
+
+                <div class="shelf-top"></div>
+
+
+                <div class="shelf-row">
+
+                    <span class="book green"></span>
+                    <span class="book blue"></span>
+                    <span class="book red"></span>
+                    <span class="plant">🌱</span>
+
+                </div>
+
+
+                <div class="shelf-row">
+
+                    <span class="book yellow"></span>
+                    <span class="book purple"></span>
+                    <span class="book orange"></span>
+
+                </div>
+
+
+                <div class="shelf-row">
+
+                    <span class="box"></span>
+                    <span class="small-plant">🪴</span>
+
+                </div>
+
+
+                <div class="shelf-drawer"></div>
+                <div class="shelf-drawer"></div>
+
+            </aside>
+
+
+
+            <!-- Blackboard -->
+
+            <div class="blackboard-wrapper">
+
+                <div class="blackboard">
+
+                    <div class="chalk-decoration">
+                        ✦
+                    </div>
+
+                    <h1>
+                        Happy Teacher's Day!
+                    </h1>
+
+                    <p>
+                        To the teacher who makes
+                        learning beautiful ❤️
+                    </p>
+
+                    <div class="board-stars">
+                        ★ ★ ★ ★ ★
+                    </div>
+
+                </div>
+
+                <div class="chalk-tray"></div>
+
+            </div>
+
+
+
+            <!-- Memory Board -->
+
+            <aside class="memory-board">
+
+                <div class="memory-board-title">
+                    Memory Gallery
+                    <span>😊</span>
+                </div>
+
+                <div class="memory-paper paper-one">
+                    📜
+                </div>
+
+                <div class="memory-paper paper-two">
+                    📸
+                </div>
+
+                <div class="memory-paper paper-three">
+                    💌
+                </div>
+
+            </aside>
+
+
+
+            <!-- Teacher Desk -->
+
+            <div class="teacher-desk">
+
+                <div class="desk-top">
+
+                    <div class="desk-card">
+                        ❤️
+                    </div>
+
+                    <div class="desk-book">
+                        📖
+                    </div>
+
+                    <div class="desk-plant">
+                        🪴
+                    </div>
+
+                    <div class="desk-mug">
+                        ☕
+                    </div>
+
+                </div>
+
+
+                <div class="desk-body">
+
+                    <div class="drawer"></div>
+                    <div class="drawer"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Student Desk Left -->
+
+            <div class="student-desk student-desk-left">
+
+                <div class="student-table">
+
+                    <div class="notebook">
+                        📓
+                    </div>
+
+                    <div class="pencil">
+                        ✏️
+                    </div>
+
+                </div>
+
+                <div class="chair"></div>
+
+            </div>
+
+
+
+            <!-- Student Desk Right -->
+
+            <div class="student-desk student-desk-right">
+
+                <div class="student-table">
+
+                    <div class="notebook">
+                        📕
+                    </div>
+
+                    <div class="pencil">
+                        ✏️
+                    </div>
+
+                </div>
+
+                <div class="chair"></div>
+
+            </div>
+
+
+
+            <!-- Floor -->
+
+            <div class="floor">
+
+                <div class="floor-circle"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Classroom Welcome Card -->
+
+        <div class="classroom-message">
+
+            <div class="message-badge">
+                ✨ A Special Surprise
+            </div>
+
+            <h2>
+                Welcome to your classroom,
+                <span>Teacher!</span>
+            </h2>
+
+            <p>
+                Everything you see here was made
+                especially to celebrate you.
+            </p>
+
+            <button
+                class="primary-button"
+                data-next="reportCard"
+                type="button">
+
+                Open Your Report Card
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Classroom Action Buttons -->
+
+        <div class="classroom-actions">
+
+            <button
+                class="floating-action"
+                data-open="memories"
+                type="button">
+
+                📸
+                <span>Memories</span>
+
+            </button>
+
+
+            <button
+                class="floating-action"
+                data-open="song"
+                type="button">
+
+                🎵
+                <span>Your Song</span>
+
+            </button>
+
+
+            <button
+                class="floating-action"
+                data-open="certificate"
+                type="button">
+
+                🏆
+                <span>Certificate</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TEACHER'S REPORT CARD
+    ====================================================== -->
+
+    <section
+        id="reportCard"
+        class="page report-page">
+
+
+        <div class="page-header">
+
+            <button
+                class="back-button"
+                data-back="classroom"
+                type="button">
+
+                ← Back
+
+            </button>
+
+
+            <div class="page-title">
+
+                <span>📋</span>
+
+                <div>
+
+                    <small>YOUR VERY OWN</small>
+
+                    <h2>Teacher's Report Card</h2>
+
+                </div>
+
+            </div>
+
+
+            <div></div>
+
+        </div>
+
+
+
+        <div class="report-book">
+
+
+            <div class="report-page-left">
+
+                <div class="paper-tape tape-one"></div>
+                <div class="paper-tape tape-two"></div>
+
+
+                <div class="report-title">
+
+                    <span>🌿</span>
+
+                    <div>
+
+                        <small>TEACHER'S</small>
+
+                        <h1>
+                            REPORT CARD
+                        </h1>
+
+                    </div>
+
+                    <span>🌿</span>
+
+                </div>
+
+
+
+                <div class="evaluation-table">
+
+                    <div class="table-header">
+                        <span>Evaluation Category</span>
+                        <span>Grade</span>
+                    </div>
+
+
+                    <div class="evaluation-row">
+                        <span>📚 Knowledge & Expertise</span>
+                        <strong>A+++</strong>
+                    </div>
+
+
+                    <div class="evaluation-row">
+                        <span>💗 Clarity of Teaching</span>
+                        <strong>A+++</strong>
+                    </div>
+
+
+                    <div class="evaluation-row">
+                        <span>🫶 Patience & Understanding</span>
+                        <strong>A+++</strong>
+                    </div>
+
+
+                    <div class="evaluation-row">
+                        <span>🦋 Guidance & Mentorship</span>
+                        <strong>A+++</strong>
+                    </div>
+
+
+                    <div class="evaluation-row">
+                        <span>❤️ Dedication</span>
+                        <strong>100/100</strong>
+                    </div>
+
+
+                    <div class="evaluation-row">
+                        <span>⭐ Inspiration</span>
+                        <strong>A+++</strong>
+                    </div>
+
+
+                    <div class="evaluation-row">
+                        <span>🏫 Classroom Impact</span>
+                        <strong>A+++</strong>
+                    </div>
+
+                </div>
+
+
+
+                <div class="overall-grade">
+
+                    <span>OVERALL GRADE</span>
+
+                    <strong>
+                        A+++
+                    </strong>
+
+                </div>
+
+
+
+                <div class="score">
+
+                    SCORE:
+                    <strong>100 / 100</strong>
+
+                    <span class="stars-score">
+                        ★★★★★
+                    </span>
+
+                </div>
+
+
+
+                <div class="report-note">
+
+                    <span>♡</span>
+
+                    <p>
+                        The best lessons aren't always
+                        found in books.
+                    </p>
+
+                    <span>🌿</span>
+
+                </div>
+
+
+
+                <div class="report-status">
+
+                    <p>
+                        <strong>STATUS:</strong>
+                        Highly Appreciated
+                    </p>
+
+                    <p>
+                        <strong>EVALUATION:</strong>
+                        Made with Gratitude by Students
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="report-page-right">
+
+                <div class="certificate-stars">
+                    ⭐
+                </div>
+
+
+                <div class="certificate-heading">
+
+                    <small>
+                        CERTIFICATE OF
+                    </small>
+
+                    <h1>
+                        APPRECIATION
+                    </h1>
+
+                    <div class="heart-line">
+                        ♡ ───── ♡
+                    </div>
+
+                </div>
+
+
+
+                <p class="certificate-presented">
+                    THIS AWARD IS PROUDLY PRESENTED TO
+                </p>
+
+
+                <h2 class="teacher-name">
+                    Our Amazing Teacher
+                </h2>
+
+
+
+                <div class="certificate-body">
+
+                    <p>
+                        🌿 For Being An Exceptional Educator 🌿
+                    </p>
+
+                    <p>
+                        In recognition of your knowledge shared,
+                        the encouragement given, the patience shown,
+                        and the countless little moments that made
+                        learning meaningful.
+                    </p>
+
+                </div>
+
+
+
+                <div class="best-award">
+
+                    <div class="trophy">
+                        🏆
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            YOU ARE THE BEST AWARD
+                        </strong>
+
+                        <small>
+                            For Excellence in Teaching,
+                            Guidance & Inspiration
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="certificate-stars-row">
+                    ★ ★ ★ ★ ★
+                </div>
+
+
+
+                <div class="certificate-official">
+
+                    <strong>
+                        ONE OF THE BEST TEACHERS / PROFESSORS
+                    </strong>
+
+                    <small>
+                        Awarded with heartfelt gratitude by students
+                    </small>
+
+                </div>
+
+
+
+                <div class="certificate-footer">
+
+                    <span>
+                        Date:
+                        <strong>5 September 2026</strong>
+                    </span>
+
+                    <span>
+                        Presented By:
+                        <strong>Your Students</strong>
+                    </span>
+
+                </div>
+
+
+
+                <p class="certificate-thanks">
+                    Thank you for making learning memorable ❤️
+                </p>
+
+
+
+                <div class="certificate-books">
+                    📚 🍎
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="page-navigation">
+
+            <button
+                class="secondary-button"
+                data-next="classroom"
+                type="button">
+
+                ← Classroom
+
+            </button>
+
+
+            <button
+                class="primary-button"
+                data-next="memories"
+                type="button">
+
+                View Beautiful Memories
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MEMORIES
+    ====================================================== -->
+
+    <section
+        id="memories"
+        class="page memories-page">
+
+
+        <div class="page-header">
+
+            <button
+                class="back-button"
+                data-back="classroom"
+                type="button">
+
+                ← Back
+
+            </button>
+
+
+            <div class="page-title">
+
+                <span>📸</span>
+
+                <div>
+
+                    <small>MEMORIES THEY CAN KEEP</small>
+
+                    <h2>Forever</h2>
+
+                </div>
+
+            </div>
+
+
+            <div></div>
+
+        </div>
+
+
+
+        <div class="memory-intro">
+
+            <div class="memory-camera">
+                📷
+            </div>
+
+            <h1>
+                Beautiful Memories
+            </h1>
+
+            <p>
+                Some moments become memories.
+                Some memories become treasures.
+            </p>
+
+        </div>
+
+
+
+        <div class="gallery">
+
+
+            <div
+                class="photo-card photo-card-large"
+                data-photo="1">
+
+                <div class="photo-placeholder">
+
+                    <span>📸</span>
+
+                    <small>Your Photo</small>
+
+                </div>
+
+                <div class="photo-caption">
+                    A beautiful classroom memory
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="photo-card"
+                data-photo="2">
+
+                <div class="photo-placeholder">
+
+                    <span>😊</span>
+
+                    <small>Your Photo</small>
+
+                </div>
+
+                <div class="photo-caption">
+                    Smiles & laughter
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="photo-card"
+                data-photo="3">
+
+                <div class="photo-placeholder">
+
+                    <span>🌸</span>
+
+                    <small>Your Photo</small>
+
+                </div>
+
+                <div class="photo-caption">
+                    Moments worth remembering
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="photo-card"
+                data-photo="4">
+
+                <div class="photo-placeholder">
+
+                    <span>❤️</span>
+
+                    <small>Your Photo</small>
+
+                </div>
+
+                <div class="photo-caption">
+                    Thank you for everything
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="photo-card"
+                data-photo="5">
+
+                <div class="photo-placeholder">
+
+                    <span>🎓</span>
+
+                    <small>Your Photo</small>
+
+                </div>
+
+                <div class="photo-caption">
+                    Learning together
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="photo-card"
+                data-photo="6">
+
+                <div class="photo-placeholder">
+
+                    <span>✨</span>
+
+                    <small>Your Photo</small>
+
+                </div>
+
+                <div class="photo-caption">
+                    A moment to cherish
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="memory-bottom">
+
+            <p>
+                📌 These memories belong in your heart forever.
+            </p>
+
+            <button
+                class="primary-button"
+                data-next="song"
+                type="button">
+
+                Listen To Your Song
+                <span>🎵</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SONG
+    ====================================================== -->
+
+    <section
+        id="song"
+        class="page song-page">
+
+
+        <div class="page-header">
+
+            <button
+                class="back-button"
+                data-back="classroom"
+                type="button">
+
+                ← Back
+
+            </button>
+
+
+            <div class="page-title">
+
+                <span>🎵</span>
+
+                <div>
+
+                    <small>AND YES...</small>
+
+                    <h2>Your Own Song</h2>
+
+                </div>
+
+            </div>
+
+
+            <div></div>
+
+        </div>
+
+
+
+        <div class="song-content">
+
+            <div class="music-animation">
+
+                <div class="music-disc">
+
+                    <div class="disc-center">
+                        ❤️
+                    </div>
+
+                </div>
+
+                <span class="note note-one">♪</span>
+                <span class="note note-two">♫</span>
+                <span class="note note-three">♪</span>
+
+            </div>
+
+
+
+            <div class="song-card">
+
+                <div class="song-label">
+                    🎧 SPECIALLY FOR YOU
+                </div>
+
+                <h1>
+                    A Song For The Best Teacher
+                </h1>
+
+                <p>
+                    Because every amazing teacher deserves
+                    their own soundtrack.
+                </p>
+
+
+
+                <div class="audio-player">
+
+                    <button
+                        id="playSong"
+                        class="play-button"
+                        type="button"
+                        aria-label="Play song">
+
+                        ▶
+
+                    </button>
+
+
+                    <div class="song-progress">
+
+                        <div
+                            id="songProgress"
+                            class="song-progress-bar">
+                        </div>
+
+                    </div>
+
+
+                    <span id="songTime">
+                        0:00
+                    </span>
+
+                </div>
+
+
+
+                <audio
+                    id="teacherSong"
+                    preload="metadata">
+
+                    <source
+                        src="assets/music/teacher-song.mp3"
+                        type="audio/mpeg">
+
+                    Your browser does not support audio.
+
+                </audio>
+
+
+
+                <p class="song-message">
+
+                    🎶 Press play and enjoy this little
+                    musical surprise.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="song-actions">
+
+            <button
+                class="secondary-button"
+                data-next="memories"
+                type="button">
+
+                ← Memories
+
+            </button>
+
+
+            <button
+                class="primary-button"
+                data-next="certificate"
+                type="button">
+
+                See Your Award
+                <span>🏆</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CERTIFICATE
+    ====================================================== -->
+
+    <section
+        id="certificate"
+        class="page certificate-page">
+
+
+        <div class="page-header">
+
+            <button
+                class="back-button"
+                data-back="classroom"
+                type="button">
+
+                ← Back
+
+            </button>
+
+
+            <div class="page-title">
+
+                <span>🏆</span>
+
+                <div>
+
+                    <small>YOU DESERVE IT</small>
+
+                    <h2>Certificate of Appreciation</h2>
+
+                </div>
+
+            </div>
+
+
+            <div></div>
+
+        </div>
+
+
+
+        <div class="award-card">
+
+            <div class="award-decoration">
+                ✦
+            </div>
+
+            <div class="award-decoration right">
+                ✦
+            </div>
+
+
+            <div class="award-icon">
+                🏆
+            </div>
+
+
+            <p class="award-small-title">
+                THIS CERTIFICATE IS PROUDLY PRESENTED TO
+            </p>
+
+
+            <h1>
+                Our Wonderful Teacher
+            </h1>
+
+
+            <div class="award-line"></div>
+
+
+            <p class="award-text">
+
+                For being more than just a teacher.
+
+                <br><br>
+
+                For inspiring us when we doubted ourselves,
+                encouraging us when things were difficult,
+                and making every lesson a little more meaningful.
+
+                <br><br>
+
+                Your patience, kindness and dedication
+                will always be remembered.
+
+            </p>
+
+
+            <div class="award-badge">
+
+                ⭐
+
+                <span>
+                    BEST TEACHER
+                </span>
+
+                ⭐
+
+            </div>
+
+
+            <div class="award-stars">
+                ★ ★ ★ ★ ★
+            </div>
+
+
+
+            <div class="award-signatures">
+
+                <div>
+
+                    <div class="signature">
+                        ❤️
+                    </div>
+
+                    <span>
+                        Your Students
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <div class="signature">
+                        ✨
+                    </div>
+
+                    <span>
+                        With Gratitude
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="award-date">
+                Teacher's Day • 2026
+            </div>
+
+        </div>
+
+
+
+        <div class="page-navigation">
+
+            <button
+                class="secondary-button"
+                data-next="song"
+                type="button">
+
+                ← Song
+
+            </button>
+
+
+            <button
+                class="primary-button"
+                data-next="finalMessage"
+                type="button">
+
+                One Last Message
+                <span>💌</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL MESSAGE
+    ====================================================== -->
+
+    <section
+        id="finalMessage"
+        class="page final-page">
+
+
+        <div class="final-background">
+
+            <div class="floating-heart heart-one">
+                ❤️
+            </div>
+
+            <div class="floating-heart heart-two">
+                💗
+            </div>
+
+            <div class="floating-heart heart-three">
+                💕
+            </div>
+
+            <div class="floating-star star-one">
+                ✨
+            </div>
+
+            <div class="floating-star star-two">
+                ⭐
+            </div>
+
+        </div>
+
+
+
+        <div class="letter-container">
+
+            <div class="letter">
+
+                <div class="letter-tape"></div>
+
+
+                <div class="letter-header">
+                    💌
+                </div>
+
+
+                <p class="letter-greeting">
+                    Dear Amazing Teacher,
+                </p>
+
+
+                <h1>
+                    Thank You ❤️
+                </h1>
+
+
+                <p>
+                    Thank you for every lesson,
+                    every encouraging word,
+                    every smile and every little moment
+                    that made school feel special.
+                </p>
+
+
+                <p>
+                    You didn't just teach us subjects.
+                    You taught us how to believe in ourselves,
+                    how to keep trying and how to become
+                    better people.
+                </p>
+
+
+                <p>
+                    The lessons you gave us will stay with us
+                    long after we leave the classroom.
+                </p>
+
+
+                <div class="letter-highlight">
+
+                    🌷
+
+                    <strong>
+                        You made a difference.
+                    </strong>
+
+                    🌷
+
+                </div>
+
+
+                <p class="letter-final">
+
+                    We are lucky to have had you
+                    as our teacher.
+
+                </p>
+
+
+                <div class="letter-signature">
+
+                    With lots of love,
+
+                    <strong>
+                        Your Students ❤️
+                    </strong>
+
+                </div>
+
+
+                <div class="letter-footer">
+                    Happy Teacher's Day! 🎓✨
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="final-actions">
+
+            <button
+                id="restartButton"
+                class="secondary-button"
+                type="button">
+
+                ↻ Start Again
+
+            </button>
+
+
+            <button
+                id="celebrateButton"
+                class="primary-button"
+                type="button">
+
+                Celebrate! 🎉
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     PHOTO MODAL
+========================================================= -->
+
+<div
+    id="photoModal"
+    class="modal"
+    aria-hidden="true">
+
+
+    <div class="modal-overlay"></div>
+
+
+    <div class="photo-modal-content">
+
+
+        <button
+            id="closePhotoModal"
+            class="modal-close"
+            type="button"
+            aria-label="Close">
+
+            ×
+
+        </button>
+
+
+        <div
+            id="modalPhoto"
+            class="modal-photo">
+
+            📸
+
+        </div>
+
+
+        <div class="modal-caption">
+
+            <h2 id="modalPhotoTitle">
+                Beautiful Memory
+            </h2>
+
+            <p id="modalPhotoDescription">
+                A moment worth remembering forever.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     CELEBRATION OVERLAY
+========================================================= -->
+
+<div
+    id="celebration"
+    class="celebration"
+    aria-hidden="true">
+
+
+    <div class="confetti-container"></div>
+
+
+    <div class="celebration-message">
+
+        <div class="celebration-emoji">
+            🎉
+        </div>
+
+
+        <h1>
+            Happy Teacher's Day!
+        </h1>
+
+
+        <p>
+            You are truly one of a kind. ❤️
+        </p>
+
+
+        <button
+            id="closeCelebration"
+            class="primary-button"
+            type="button">
+
+            Thank You! 💖
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     CUSTOM CURSOR / CLICK EFFECT
+========================================================= -->
+
+<div
+    id="cursorHeart"
+    class="cursor-heart"
+    aria-hidden="true">
+
+    ❤️
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="script.js" defer></script>
+
+
+</body>
+</html>
